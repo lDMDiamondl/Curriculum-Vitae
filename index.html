@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,24 +23,26 @@
         }
 
         h1 {
-            font-size: 48px; 
+            font-size: 48px;
             font-weight: 300;
             margin: 0;
             letter-spacing: 1px;
             color: #000;
         }
+
         h1 .last-name {
             font-weight: 700;
         }
 
         .contact-info {
-            font-size: 16px; 
+            font-size: 16px;
             margin-top: 12px;
             display: flex;
             justify-content: center;
             gap: 20px;
             color: #555;
         }
+
         .contact-info a {
             color: #555;
             text-decoration: none;
@@ -48,6 +51,7 @@
         section {
             margin-bottom: 35px;
         }
+
         .section-title {
             font-size: 26px;
             font-weight: bold;
@@ -57,6 +61,7 @@
             text-transform: capitalize;
             color: #000;
         }
+
         .section-title::after {
             content: "";
             flex: 1;
@@ -68,65 +73,123 @@
         .item {
             margin-bottom: 22px;
         }
+
         .row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 2px;
         }
+
         .main-text {
             font-weight: bold;
             font-size: 18px;
             color: #000;
         }
+
         .sub-text {
             color: #666;
             font-style: italic;
             font-size: 16px;
         }
+
         .details-text {
-            font-size: 16px;
-            color: #444;
+            font-size: 14px;
+            color: #666;
+            font-variant: small-caps;
+            font-weight: 600;
         }
-        
+
         ul {
             margin: 6px 0 0 22px;
             padding: 0;
             font-size: 15px;
             color: #444;
         }
+
         li {
             margin-bottom: 5px;
         }
+
         li strong {
             color: #222;
         }
 
-        /* Skills Grid */
         .skills-container {
             font-size: 16px;
         }
+
         .skill-item {
             margin-bottom: 10px;
             display: flex;
         }
+
         .skill-category {
             font-weight: bold;
             min-width: 150px;
             color: #000;
         }
 
+        .award-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .award-year {
+            color: #000;
+            margin-right: 20px;
+            min-width: 40px;
+        }
+
+        .award-detail {
+            flex: 1;
+            color: #000;
+        }
+
+        .award-detail strong {
+            font-weight: bold;
+        }
+
+        .award-location {
+            color: #666;
+            font-style: italic;
+            margin-left: auto;
+        }
+
+        #honors .item,
+        #certifications .item {
+            margin-bottom: 6px;
+        }
+
+        #skills .skill-item {
+            margin-bottom: 5px;
+        }
+
         @media (max-width: 600px) {
-            .row {
+
+            .row,
+            .award-row {
                 flex-direction: column;
             }
-            .sub-text {
+
+            .sub-text,
+            .award-location,
+            .details-text {
                 margin-top: 2px;
                 text-align: left;
+                margin-left: 0;
+            }
+
+            .award-year {
+                margin-bottom: 2px;
             }
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -147,11 +210,12 @@
             </div>
             <div class="row">
                 <span class="details-text">B.S in AI Robotics</span>
-                <span class="sub-text">Mar. 2022 ~ Feb. 2027 (Expected)</span>
+                <span class="sub-text">Mar. 2022 - Feb. 2027 (Expected)</span>
             </div>
             <ul>
-                <li><strong>Interests:</strong> Machine Learning, Image Processing, Computer Vision, Object Detection</li>
-                <li><strong>GPA:</strong> Total 3.89/4.5, Major 3.92/4.5</li>
+                <li>Interests: Machine Learning, Image Processing, Computer Vision, Object Detection
+                </li>
+                <li>GPA: Total 3.89/4.5, Major 3.92/4.5</li>
             </ul>
         </div>
     </section>
@@ -165,10 +229,11 @@
             </div>
             <div class="row">
                 <span class="details-text">Undergraduate Researcher</span>
-                <span class="sub-text">Dec. 2023 ~ Present</span>
+                <span class="sub-text">Dec. 2023 - Present</span>
             </div>
             <ul>
-                <li>Developed and implemented various deep learning models for computer vision tasks, including Human Action Recognition (HAR) and Object Detection.</li>
+                <li>Developed and implemented various deep learning models for computer vision tasks, including Human
+                    Action Recognition (HAR) and Object Detection.</li>
             </ul>
         </div>
     </section>
@@ -178,21 +243,26 @@
         <div class="item">
             <div class="row">
                 <span class="main-text">Detection of Abnormal Human Activity Recognition</span>
-                <span class="sub-text">Mar. 2024 ~ Jan. 2025</span>
+                <span class="sub-text">Mar. 2024 - Jan. 2025</span>
             </div>
             <ul>
-                <li>Developed a system to identify and flag unusual human behaviors from real-time webcam streams for automated security monitoring.</li>
-                <li>Engineered a two-stage pipeline: first, utilized <strong>YOLOv11</strong> for efficient human detection, then processed the resulting bounding boxes with a <strong>Two-Stream CNN</strong> for detailed action classification.</li>
+                <li>Developed a system to identify and flag unusual human behaviors from real-time webcam streams for
+                    automated security monitoring.</li>
+                <li>Engineered a two-stage pipeline: first, utilized YOLOv11 for efficient human
+                    detection, then processed the resulting bounding boxes with a Two-Stream CNN for
+                    detailed action classification.</li>
             </ul>
         </div>
         <div class="item">
             <div class="row">
                 <span class="main-text">AI-based Multimodal Wearable Visual Aid for the Visually Impaired</span>
-                <span class="sub-text">Feb. 2025 ~ Present</span>
+                <span class="sub-text">Feb. 2025 - Present</span>
             </div>
             <ul>
-                <li>Contributed to the development of a real-time navigational assistance system by designing and training models to detect indoor and outdoor obstacles from stereo camera input.</li>
-                <li>Fine-tuned an <strong>RT-DETR</strong> model on a custom dataset of outdoor obstacles, achieving over 90% mAP50 for 5 classes and preparing the model for future deployment on an NPU.</li>
+                <li>Contributed to the development of a real-time navigational assistance system by designing and
+                    training models to detect indoor and outdoor obstacles from stereo camera input.</li>
+                <li>Fine-tuned an RT-DETR model on a custom dataset of outdoor obstacles, achieving
+                    over 90% mAP50 for 5 classes and preparing the model for future deployment on an NPU.</li>
             </ul>
         </div>
     </section>
@@ -209,7 +279,9 @@
                 <span class="sub-text">Nov. 2025</span>
             </div>
             <ul>
-                <li>Developed a unified vision-based system using a VideoMAE V2 backbone and low-light enhancement filter to recognize 8 baby behaviors, validating its feasibility for real-time robotic monitoring.</li>
+                <li>Developed a unified vision-based system using a VideoMAE V2 backbone and low-light enhancement
+                    filter to recognize 8 baby behaviors, validating its feasibility for real-time robotic monitoring.
+                </li>
                 <li>Reviewed one of the paper submissions for ICCAS 2025.</li>
             </ul>
         </div>
@@ -220,22 +292,27 @@
         <div class="item">
             <div class="row">
                 <span class="main-text">Sejong AI Circle SAI</span>
-                <span class="sub-text">Mar. 2025 ~ Feb. 2026</span>
+                <span class="sub-text">Mar. 2025 - Present</span>
+            </div>
+            <div class="row">
+                <span class="details-text">Member</span>
             </div>
             <ul>
-                <li>Led and mentored a study group of 4 junior members, focusing on foundational deep learning concepts like CNNs and RNNs.</li>
+                <li>Led and mentored a study group of 4 junior members, focusing on foundational deep learning concepts
+                    like CNNs and RNNs.</li>
             </ul>
         </div>
         <div class="item">
             <div class="row">
                 <span class="main-text">Korea Electronics Technology Institute (KETI)</span>
-                <span class="sub-text">Jan. 2026 ~ Feb. 2026</span>
             </div>
             <div class="row">
                 <span class="details-text">Research Internship</span>
+                <span class="sub-text">Jan. 2026 - Feb. 2026</span>
             </div>
             <ul>
-                <li>Developed an on-device AI prototype using YOLOv11 on Raspberry Pi, optimizing inference performance with Hailo NPU.</li>
+                <li>Developed an on-device AI prototype using YOLOv11 on Raspberry Pi, optimizing inference performance
+                    with Hailo NPU.</li>
             </ul>
         </div>
     </section>
@@ -243,22 +320,18 @@
     <section id="honors">
         <div class="section-title">Honors & Awards</div>
         <div class="item">
-            <div class="row">
-                <span class="main-text">Bronze Award, Sejong AI Challenge 2025S</span>
-                <span class="sub-text">June. 2025</span>
+            <div class="award-row">
+                <span class="award-year">2025</span>
+                <span class="award-detail">Bronze Award, Sejong AI Challenge 2025S</span>
+                <span class="award-location">Seoul, S.Korea</span>
             </div>
-            <ul>
-                <li>Placed 8th out of 29 participants in an on-campus Kaggle competition.</li>
-            </ul>
         </div>
         <div class="item">
-            <div class="row">
-                <span class="main-text">Gold Award, Sejong AI Challenge 2025F</span>
-                <span class="sub-text">Dec. 2025</span>
+            <div class="award-row">
+                <span class="award-year">2025</span>
+                <span class="award-detail">Gold Award, Sejong AI Challenge 2025F</span>
+                <span class="award-location">Seoul, S.Korea</span>
             </div>
-            <ul>
-                <li>Placed 1st out of 28 participants in an on-campus Kaggle competition.</li>
-            </ul>
         </div>
     </section>
 
@@ -276,6 +349,10 @@
             <div class="skill-item">
                 <span class="skill-category">Data Analysis</span>
                 <span>Numpy, Pandas, Matplotlib</span>
+            </div>
+            <div class="skill-item">
+                <span class="skill-category">Languages</span>
+                <span>Korean, English, Japanese</span>
             </div>
         </div>
     </section>
@@ -297,7 +374,5 @@
     </section>
 
 </body>
+
 </html>
-
-
-
