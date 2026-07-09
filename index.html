@@ -15,6 +15,7 @@
             margin: 40px auto;
             padding: 20px;
             background-color: #fff;
+            position: relative;
         }
 
         header {
@@ -187,10 +188,35 @@
                 margin-bottom: 2px;
             }
         }
+        .pdf-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 15px;
+            background-color: #f8f9fa;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background-color 0.2s;
+            border: 1px solid #ddd;
+        }
+
+        .pdf-link:hover {
+            background-color: #e9ecef;
+        }
     </style>
 </head>
 
 <body>
+
+    <a href="CV.pdf" target="_blank" class="pdf-link" title="Download CV as PDF">
+        <i class="fas fa-file-pdf"></i> View PDF
+    </a>
 
     <header>
         <h1>Min Chae <span class="last-name">Kim</span></h1>
